@@ -1,233 +1,244 @@
 :root {
+    /* Variables de colores */
     --primario: #9c27b0;
     --primarioOscuro: #89119d;
     --secundario: #ffce00;
-    --secundarioOscuro: rgb(233,287,2);
+    --secundarioOscuro: rgb(233,287,2); /* Nota: rgb(233,287,2) es incorrecto porque los valores de RGB deben estar entre 0 y 255 */
     --blanco: #fff;
     --negro: #000;
 
+    /* Variable de fuente principal */
     --fuentePrincipal: "Staatliches", sans-serif;
 }
 
-html{
-    font-size: 62.5%;
-    box-sizing: border-box;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
+html {
+    font-size: 62.5%; /* Establece el tamaño base de la fuente a 10px para facilitar el uso de rem */
+    box-sizing: border-box; /* Incluye el padding y el border en el cálculo del ancho y alto */
 }
 
-body{
-    font-size: 16px; /*1rem = 10px*/
-    background-color: var(--primario);
-    line-height: 1.5;
+*, *:before, *:after {
+    box-sizing: inherit; /* Hereda el box-sizing del elemento padre */
+}
+
+body {
+    font-size: 16px; /* 1rem = 10px */
+    background-color: var(--primario); /* Fondo del cuerpo principal */
+    line-height: 1.5; /* Altura de línea */
 }
 
 p {
-    font-size: 1.8rem;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--blanco);
+    font-size: 1.8rem; /* Tamaño de fuente para los párrafos */
+    font-family: Arial, Helvetica, sans-serif; /* Fuente para los párrafos */
+    color: var(--blanco); /* Color de texto blanco */
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
 
-img{
-    width: 100%;
+img {
+    width: 100%; /* Las imágenes ocupan el ancho completo del contenedor */
 }
 
 .contenedor {
-    max-width: 120rem;
-    margin: 0 auto;
+    max-width: 120rem; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
 
 h1, h2, h3 {
-    text-align: center;
-    color: var(--secundario);
-    font-family: var(--fuentePrincipal);
+    text-align: center; /* Centra el texto de los encabezados */
+    color: var(--secundario); /* Color de los encabezados */
+    font-family: var(--fuentePrincipal); /* Fuente principal para los encabezados */
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 4rem; /* Tamaño de fuente para h1 */
 }
 h2 {
-    font-size: 3.2rem;
+    font-size: 3.2rem; /* Tamaño de fuente para h2 */
 }
 h3 {
-    font-size: 2.4rem;
+    font-size: 2.4rem; /* Tamaño de fuente para h3 */
 }
 
 .header {
-    display: flex;
-    justify-content: center;
+    display: flex; /* Uso de flexbox para el contenedor del encabezado */
+    justify-content: center; /* Centra el contenido horizontalmente */
 }
-.header__logo{
-    margin: 3rem 0;
+
+.header__logo {
+    margin: 3rem 0; /* Margen superior e inferior */
 }
-.footer{
-    background-color: var(--primarioOscuro);
-    padding: 1rem 0;
-    margin-top: 2rem;
+
+.footer {
+    background-color: var(--primarioOscuro); /* Fondo oscuro para el pie de página */
+    padding: 1rem 0; /* Relleno superior e inferior */
+    margin-top: 2rem; /* Margen superior */
 }
-.footer__texto{
-    font-family: var(--fuentePrincipal);
-    text-align: center;
-    font-size: 2.2rem;
+
+.footer__texto {
+    font-family: var(--fuentePrincipal); /* Fuente principal */
+    text-align: center; /* Centra el texto */
+    font-size: 2.2rem; /* Tamaño de fuente */
 }
 
 .navegacion {
-    background-color: var(--primarioOscuro);
-    padding: 1rem 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-.navegacion__enlace{
-    font-family: var(--fuentePrincipal);
-    color: var(--blanco);
-    font-size: 2.5rem;
+    background-color: var(--primarioOscuro); /* Fondo oscuro para la navegación */
+    padding: 1rem 0; /* Relleno superior e inferior */
+    display: flex; /* Uso de flexbox para el contenedor de navegación */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    gap: 2rem; /* Espacio entre los elementos */
 }
 
-.navegacion__enlace:last-of-type{
-    margin-right: 0;
+.navegacion__enlace {
+    font-family: var(--fuentePrincipal); /* Fuente principal */
+    color: var(--blanco); /* Color blanco para los enlaces */
+    font-size: 2.5rem; /* Tamaño de fuente */
+}
+
+.navegacion__enlace:last-of-type {
+    margin-right: 0; /* Elimina el margen derecho del último enlace */
 }
 
 .navegacion__enlace--activo,
-.navegacion__enlace:hover{
-    color: var(--secundario);
+.navegacion__enlace:hover {
+    color: var(--secundario); /* Color secundario para el enlace activo o en hover */
 }
 
-.grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+.grid {
+    display: grid; /* Uso de grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 2rem; /* Espacio entre los elementos */
 }
 
 @media (min-width: 768px) {
-    .grid{
-        grid-template-columns: repeat(3, 1fr);
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales en pantallas anchas */
     }
 }
 
-.producto{
-    background-color: var(--primarioOscuro);
-    padding: 1rem;
+.producto {
+    background-color: var(--primarioOscuro); /* Fondo oscuro para el producto */
+    padding: 1rem; /* Relleno */
 }
 
-.producto__nombre{
-    font-size: 4rem;
+.producto__nombre {
+    font-size: 4rem; /* Tamaño de fuente */
 }
-.producto__precio{
-    font-size: 2.8rem;
-    color: var(--secundario);
+
+.producto__precio {
+    font-size: 2.8rem; /* Tamaño de fuente */
+    color: var(--secundario); /* Color secundario */
 }
 
 .producto__nombre,
-.producto__precio{
-    font-family: var(--fuentePrincipal);
-    margin: 1rem 0;
-    text-align: center;
-    line-height: 1.5;
+.producto__precio {
+    font-family: var(--fuentePrincipal); /* Fuente principal */
+    margin: 1rem 0; /* Margen superior e inferior */
+    text-align: center; /* Centra el texto */
+    line-height: 1.5; /* Altura de línea */
 }
 
-.grafico{
-    min-height: 30rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-column:  1 / 3;
-}
-.grafico--camisas{
-    grid-row: 2 / 3;
-    background-image: url(/img/grafico1.jpg);
+.grafico {
+    min-height: 30rem; /* Altura mínima */
+    background-repeat: no-repeat; /* No repetir la imagen de fondo */
+    background-size: cover; /* Ajustar la imagen al contenedor */
+    grid-column: 1 / 3; /* Ocupa dos columnas en el grid */
 }
 
-.grafico--node{
-    background-image: url(/img/grafico2.jpg);
-    grid-row: 8 / 9;
+.grafico--camisas {
+    grid-row: 2 / 3; /* Ocupa la segunda fila */
+    background-image: url(/img/grafico1.jpg); /* Imagen de fondo */
 }
 
-@media (min-width: 768px) {
-    .grafico--node{
-        grid-row:  5 / 6;
-        grid-column: 2 /4;
-    }
-}
-
-
-/** Nosotros **/
-.nosotros{
-    display: grid;
-    /**grid-template-rows: repeat(2, 1fr);**/
-}
-@media (min-width: 768px) {
-    .nosotros{
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
-    }
-}
-.nosotros__imagen{
-    grid-row: 1/2;
-}
-@media (min-width: 768px) {
-    .nosotros__imagen{
-        grid-column: 2 / 3;
-    }
-}
-
-.bloques{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-@media (min-width: 768px) {
-    .bloques{
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-.bloque{
-    text-align: center;
-}
-.bloque__titulo{
-    margin: 0;
+.grafico--node {
+    background-image: url(/img/grafico2.jpg); /* Imagen de fondo */
+    grid-row: 8 / 9; /* Ocupa la octava fila */
 }
 
 @media (min-width: 768px) {
-    .camisa{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
+    .grafico--node {
+        grid-row: 5 / 6; /* Ocupa la quinta fila en pantallas anchas */
+        grid-column: 2 / 4; /* Ocupa la segunda y tercera columna en pantallas anchas */
     }
 }
-.formulario{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-.formulario__campo{
-    /**
-    border-color: var(--primarioOscuro);
-    border-width: 1rem;
-    border-style: solid;
-    **/
 
-    border: 1rem solid var(--primarioOscuro);
-    background-color: transparent;
-    color: var(--blanco);
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 1rem;
+/** Sección Nosotros **/
+.nosotros {
+    display: grid; /* Uso de grid layout */
 }
-.formulario__submit{
-    background-color: var(--secundario);
-    border: none;
-    font-size: 2rem;
-    font-family: var(--fuentePrincipal);
-    padding: 2rem;
-    transition: background-color 1s ease;
-    grid-column: 1/3;
+
+@media (min-width: 768px) {
+    .nosotros {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales en pantallas anchas */
+        column-gap: 2rem; /* Espacio entre las columnas */
+    }
 }
-.formulario__submit:hover{
-    cursor: pointer;
-    background-color: var(--secundarioOscuro);
+
+.nosotros__imagen {
+    grid-row: 1 / 2; /* Ocupa la primera fila */
+}
+
+@media (min-width: 768px) {
+    .nosotros__imagen {
+        grid-column: 2 / 3; /* Ocupa la segunda columna en pantallas anchas */
+    }
+}
+
+.bloques {
+    display: grid; /* Uso de grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 2rem; /* Espacio entre los elementos */
+}
+
+@media (min-width: 768px) {
+    .bloques {
+        grid-template-columns: repeat(4, 1fr); /* Cuatro columnas iguales en pantallas anchas */
+    }
+}
+
+.bloque {
+    text-align: center; /* Centra el texto */
+}
+
+.bloque__titulo {
+    margin: 0; /* Elimina el margen */
+}
+
+@media (min-width: 768px) {
+    .camisa {
+        display: grid; /* Uso de grid layout */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales en pantallas anchas */
+        column-gap: 2rem; /* Espacio entre las columnas */
+    }
+}
+
+.formulario {
+    display: grid; /* Uso de grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 2rem; /* Espacio entre los elementos */
+}
+
+.formulario__campo {
+    border: 1rem solid var(--primarioOscuro); /* Borde sólido */
+    background-color: transparent; /* Fondo transparente */
+    color: var(--blanco); /* Color blanco */
+    font-size: 2rem; /* Tamaño de fuente */
+    font-family: Arial, Helvetica, sans-serif; /* Fuente */
+    padding: 1rem; /* Relleno */
+}
+
+.formulario__submit {
+    background-color: var(--secundario); /* Fondo secundario */
+    border: none; /* Sin borde */
+    font-size: 2rem; /* Tamaño de fuente */
+    font-family: var(--fuentePrincipal); /* Fuente principal */
+    padding: 2rem; /* Relleno */
+    transition: background-color 1s ease; /* Transición para el cambio de color de fondo */
+    grid-column: 1 / 3; /* Ocupa ambas columnas */
+}
+
+.formulario__submit:hover {
+    cursor: pointer; /* Cambia el cursor a pointer */
+    background-color: var(--secundarioOscuro); /* Cambia el fondo al color secundario oscuro */
 }

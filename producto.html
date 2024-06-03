@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para que sea responsive -->
+    <title>Productos</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="/css/normalize.css"> <!-- Enlace al archivo de estilos normalize.css para resetear estilos predeterminados -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconexión para optimizar la carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconexión para optimizar la carga de fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"> <!-- Enlace a la fuente Staatliches desde Google Fonts -->
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Enlace al archivo de estilos principal -->
 </head>
 <body>
+    <!-- Encabezado del sitio -->
     <header class="header">
-        <a href="index.html">
-            <img class="header__logo" src="img/logo.png" alt="Logo empresa">
+        <a href="index.html"> <!-- Enlace a la página principal -->
+            <img class="header__logo" src="img/logo.png" alt="Logo empresa"> <!-- Logo de la empresa -->
         </a>
     </header>
+    <!-- Navegación principal -->
     <nav class="navegacion">
-        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
-        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a> <!-- Enlace a la tienda, activado -->
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a> <!-- Enlace a la página "Nosotros" -->
     </nav>
 
+    <!-- Contenido principal -->
     <main class="contenedor">
-        <h1>React JS</h1>
+        <h1>React JS</h1> <!-- Título del producto -->
 
+        <!-- Sección del producto con imagen y descripción -->
         <div class="camisa">
-            <img src="/img/1.jpg" alt="" class="camisa__imagen">
+            <img src="/img/1.jpg" alt="" class="camisa__imagen"> <!-- Imagen del producto -->
 
             <div class="camisa__contenido">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga debitis eaque molestias incidunt, consequuntur, illum provident nihil quas odio qui itaque fugit. Distinctio eaque ea facilis id, doloremque vel eius!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga debitis eaque molestias incidunt, consequuntur, illum provident nihil quas odio qui itaque fugit. Distinctio eaque ea facilis id, doloremque vel eius!</p> <!-- Descripción del producto -->
 
+                <!-- Formulario para seleccionar talla y cantidad, y agregar al carrito -->
                 <form class="formulario" action="">
                     <select name="" id="" class="formulario__campo">
-                        <option value="" disabled selected> -- Seleccionar talla --</option>
+                        <option value="" disabled selected> -- Seleccionar talla --</option> <!-- Opción de selección de talla -->
                         <option value="">Chica</option>
                         <option value="">Mediana</option>
                         <option value="">Grande</option>
                     </select>
-                    <input class="formulario__campo" type="number" min="1" placeholder="Cantidad">
-                    <input class="formulario__submit" type="submit" value="Agregar al carrito">
+                    <input class="formulario__campo" type="number" min="1" placeholder="Cantidad"> <!-- Campo para ingresar la cantidad -->
+                    <input class="formulario__submit" type="submit" value="Agregar al carrito"> <!-- Botón para agregar al carrito -->
                 </form>
             </div>
         </div>
     </main>
 
+    <!-- Pie de página del sitio -->
     <footer class="footer">
-        <p class="footer__texto">Store Shopping - Todos los derechos reservados</p>
+        <p class="footer__texto">Store Shopping - Todos los derechos reservados</p> <!-- Texto del pie de página -->
     </footer>
 </body>
 </html>

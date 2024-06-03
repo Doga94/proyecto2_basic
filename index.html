@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para que sea responsive -->
+    <title>Store</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="/css/normalize.css"> <!-- Enlace al archivo de estilos normalize.css para resetear estilos predeterminados -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconexión para optimizar la carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconexión para optimizar la carga de fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"> <!-- Enlace a la fuente Staatliches desde Google Fonts -->
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Enlace al archivo de estilos principal -->
 </head>
 <body>
+    <!-- Encabezado del sitio -->
     <header class="header">
-        <a href="index.html">
-            <img class="header__logo" src="img/logo.png" alt="Logo empresa">
+        <a href="index.html"> <!-- Enlace a la página principal -->
+            <img class="header__logo" src="img/logo.png" alt="Logo empresa"> <!-- Logo de la empresa -->
         </a>
     </header>
+
+    <!-- Navegación principal -->
     <nav class="navegacion">
-        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
-        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a> <!-- Enlace a la tienda -->
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a> <!-- Enlace a la página "Nosotros" -->
     </nav>
 
+    <!-- Contenido principal -->
     <main class="contenedor">
-        <h1>Nuestros productos</h1>
+        <h1>Nuestros productos</h1> <!-- Título principal -->
 
+        <!-- Grid de productos -->
         <div class="grid">
+            <!-- Producto 1 -->
             <div class="producto">
-                <a href="producto.html">
-                    <img class="producto__imagen" src="/img/1.jpg" alt="">
+                <a href="producto.html"> <!-- Enlace a la página del producto -->
+                    <img class="producto__imagen" src="/img/1.jpg" alt=""> <!-- Imagen del producto -->
                     <div class="producto__informacion">
-                        <p class="producto__nombre">Vuej js</p>
-                        <p class="producto__precio">25.000 Cop</p>
+                        <p class="producto__nombre">Vuej js</p> <!-- Nombre del producto -->
+                        <p class="producto__precio">25.000 Cop</p> <!-- Precio del producto -->
                     </div>
                 </a>
             </div>
+            <!-- Repetir div.producto para cada producto adicional -->
             <div class="producto">
                 <a href="producto.html">
                     <img class="producto__imagen" src="/img/2.jpg" alt="">
@@ -43,6 +50,7 @@
                     </div>
                 </a>
             </div>
+            <!-- Añadir más productos según sea necesario -->
             <div class="producto">
                 <a href="producto.html">
                     <img class="producto__imagen" src="/img/3.jpg" alt="">
@@ -151,13 +159,15 @@
                     </div>
                 </a>
             </div>
+            <!-- Espacios para gráficos adicionales -->
             <div class="grafico grafico--camisas"></div>
             <div class="grafico grafico--node"></div>
         </div>
     </main>
 
+    <!-- Pie de página del sitio -->
     <footer class="footer">
-        <p class="footer__texto">Store Shopping - Todos los derechos reservados</p>
+        <p class="footer__texto">Store Shopping - Todos los derechos reservados</p> <!-- Texto del pie de página -->
     </footer>
 </body>
 </html>
